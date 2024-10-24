@@ -24,7 +24,7 @@ function loadLogin() {
     passwordInput.value = savedPassword;
   }
   if (savedEmail && savedPassword) {
-    window.location.assign("/Assignment-todo-interns/new-task.html");
+    window.location.assign("new-task.html");
   }
 }
 
