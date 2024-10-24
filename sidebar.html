@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div role="group" aria-label="Vertical button group" id="sidebar">
+      <div
+        class="rounded-end-5 rounded-start-0 navDiv1"
+        id="task-btn"
+        onclick="handleTaskUrl()"
+      >
+        <div class="hug-2">
+          <i id="task-img"></i>
+          <button type="button" class="btn" id="taskBtn">
+            <a href="./new-task.html">Task</a>
+          </button>
+        </div>
+      </div>
+      <div class="rounded-end-5 rounded-start-0 navDiv2" id="location-btn">
+        <div class="hug-1">
+          <i id="location-img"></i>
+          <button type="button" class="btn" id="locationBtn">
+            <a href="./location.html">Location</a>
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="rounded-end-5 rounded-start-0 navDiv1"
+        id="logoutDiv"
+        style="margin-top: auto"
+      >
+        <div class="hug-2" style="width: 130px">
+          <i id="logout-img"></i>
+          <button type="button" class="btn" id="logoutBtn">Logout</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function initialSidebarChanges() {
+        window.location.pathname.split("/")[2] === "location.html";
+
+        window.location.pathname.split("/")[2] === "new-task.html";
+      }
+      function handleTaskUrl() {
+        window.location.pathname.split("/")[2] = "new-task.html";
+      }
+      function logout() {
+        localStorage.removeItem("email");
+        localStorage.removeItem("password");
+        window.location.assign("/Assignment-todo-interns/login.html");
+      }
+      function locationButton() {
+        window.location.assign("/Assignment-todo-interns/location.html");
+      }
+      document.querySelector("#logoutDiv").addEventListener("click", logout);
+      document
+        .querySelector("#locationBtn")
+        .addEventListener("click", locationButton);
+      initialSidebarChanges();
+    </script>
+  </body>
+</html>

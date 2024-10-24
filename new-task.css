@@ -1,0 +1,503 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.parentContainer {
+  display: flex;
+  margin-top: 58px;
+}
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 344px;
+  height: 87vh;
+}
+#task-btn {
+  background-color: #000000;
+}
+#task-btn a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.78px;
+  text-align: left;
+}
+#task-img {
+  width: 18px;
+  height: 22.91px;
+  background-image: url("./task.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+}
+.hug-2 {
+  display: flex;
+  width: 130px;
+  height: 22.91px;
+  gap: 10px;
+  align-items: center;
+}
+
+.hug-1 {
+  display: flex;
+  align-items: center;
+  width: 130px;
+  gap: 10px;
+}
+.navDiv2 {
+  width: 250px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#location-btn {
+  background-color: #fff;
+}
+#location-btn a {
+  color: #000000;
+  text-decoration: none;
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.78px;
+  text-align: left;
+}
+
+#location-img {
+  width: 18px;
+  height: 22.91px;
+  background-image: url("./location.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+}
+
+#log-out {
+  width: 61px;
+  height: 22px;
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.78px;
+  text-align: left;
+  color: #000000;
+  cursor: pointer;
+  border: 0;
+  background-color: #fff;
+  margin-left: 10px;
+}
+
+#logout-img {
+  width: 18px;
+  height: 18px;
+  background-image: url("./logOut.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+}
+
+#logoutBtn {
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.78px;
+  text-align: left;
+}
+.navDiv1 {
+  width: 250px;
+  height: 55px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#add-new-task {
+  padding: 0;
+  color: #575767;
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: left;
+}
+
+#task-container {
+  position: absolute;
+  top: 60px;
+  left: 342px;
+  width: 342px;
+  height: 621px;
+  color: #575767;
+}
+
+#incomplete {
+  position: absolute;
+  top: 50px;
+  left: 1px;
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: left;
+}
+
+#incomplete-box {
+  width: 342px;
+  height: 281px;
+  position: absolute;
+  top: 82px;
+}
+
+#completed {
+  position: absolute;
+  top: 403px;
+  width: 342px;
+  height: 218px;
+}
+#completed-text {
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: left;
+  color: #575767;
+}
+
+.modal-content {
+  width: 765px;
+  height: 501px;
+  top: 114px;
+  left: 258px;
+  bottom: 105px;
+}
+.modal-header {
+  border: none;
+  margin: 15px 20px;
+}
+.modal-title {
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24.2px;
+  text-align: left;
+  color: #000000;
+}
+
+form {
+  width: 626px;
+  height: 248px;
+  border: #bdbdbdcc;
+  margin: 0 40px;
+}
+
+.bi-chat-text {
+  margin-top: -9px;
+  width: 18px;
+  height: 18px;
+  background-image: url("./Vector.png");
+  background-size: contain; /* Adjust the size to fit */
+  background-repeat: no-repeat;
+  display: block;
+  z-index: 1;
+}
+#task-summary {
+  border: 0;
+  border-bottom: 0.5px solid #bdbdbdcc;
+  border-radius: 0;
+  padding-bottom: 15px;
+  padding-left: 35px;
+  margin-left: -24px;
+}
+
+#task-summary::placeholder {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  text-align: left;
+  color: #bdbdbd;
+}
+
+.bi-card-text {
+  margin-top: 8px;
+  width: 18px;
+  height: 18px;
+  background-image: url("./description.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  z-index: 1;
+}
+
+#task-description {
+  border: 0;
+  border-bottom: 0.5px solid #bdbdbdcc;
+  border-radius: 0;
+  padding-bottom: 15px;
+  padding-left: 35px;
+  margin-left: -24px;
+}
+
+#task-description::placeholder {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  text-align: left;
+  color: #bdbdbd;
+}
+
+.bi-calendar {
+  margin-top: 8px;
+  width: 20px;
+  height: 20px;
+  background-image: url("./date.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  z-index: 1;
+}
+
+#task-due-date {
+  border: 0;
+  border-bottom: 0.5px solid #bdbdbdcc;
+  border-radius: 0;
+  padding-bottom: 15px;
+  padding-left: 35px;
+  margin-left: -24px;
+}
+
+#task-due-date::placeholder {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  text-align: left;
+  color: #bdbdbd;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: column;
+  border-top: none;
+  margin-top: 0px;
+}
+
+.btn-save {
+  background-color: #000000;
+  color: #fff;
+  padding: 16px 32px;
+  width: 348px;
+  height: 55px;
+}
+
+button .btn-save {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.36px;
+  text-align: center;
+}
+
+.btn-cancel {
+  color: #000000;
+  padding: 16px 32px;
+  width: 348px;
+  height: 55px;
+}
+
+button .btn-cancel {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.36px;
+  text-align: center;
+}
+
+/* Task List Styles */
+
+.task-item {
+  display: flex;
+  align-items: start;
+  /* height: 45px; */
+  margin-top: 10px;
+}
+
+.task-item h6 {
+  font-size: 16px;
+}
+
+.task-item small {
+  display: block;
+  margin-top: 5px;
+}
+
+/* Incomplete and Completed Sections */
+/* #incomplete,
+#completed-text {
+  font-weight: bold;
+  font-size: 18px;
+} */
+
+.summaryElement {
+  margin-bottom: 0;
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  color: #000000;
+}
+
+.summaryElementCompleted {
+  margin-bottom: 0;
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  color: #b9b9be;
+}
+.dueDateElement {
+  display: flex;
+  margin-top: 0;
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16.94px;
+  text-align: left;
+  color: #b9b9be;
+}
+/* Default checkbox styles */
+.form-check-input {
+  appearance: none; /* Remove default appearance */
+  width: 20px;
+  height: 20px;
+  background-color: #fff; /* Default background color */
+  border: 2px solid #dadada; /* Border for checkbox */
+  border-radius: 4px; /* Optional: round the corners */
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 0;
+}
+
+/* Change background color when the checkbox is checked */
+.form-check-input:checked {
+  background-color: black; /* Change background color to green */
+  border-color: black; /* Change border color to match */
+}
+
+/* Add a black checkmark when checked */
+.form-check-input:checked::after {
+  font-size: 14px;
+  position: absolute;
+  top: 2px;
+  left: 5px;
+}
+
+#clock-img {
+  width: 24px;
+  height: 24px;
+  background-image: url("./clock.png");
+  background-size: contain; /* Adjust the size to fit */
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.notification-contain {
+  transition: all 0.6s ease;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 35px;
+  left: 891px;
+  right: 29px;
+  width: 360px;
+  height: 122px;
+  gap: 0px;
+  border-radius: 10px;
+  opacity: 0px;
+  box-shadow: 0px 0px 10px 0px #0000001a;
+}
+
+.rectangle {
+  display: flex;
+  justify-content: end;
+  width: 360px;
+  height: 33px;
+  gap: 0px;
+  border-radius: 0px 0px 10px 10px;
+  opacity: 0px;
+  background: #f6f5f5;
+}
+
+.text-and-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+}
+
+.text {
+  margin-top: 18px;
+}
+.text-1 {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.78px;
+  text-align: left;
+  color: #000000;
+}
+
+.text-2 {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.36px;
+  text-align: left;
+  color: #575767;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+  background: #fabb18;
+  border-radius: 10px;
+}
+
+#skip-btn,
+#later-btn {
+  margin-top: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+#skip-btn {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 14.52px;
+  text-align: left;
+}
+
+#later-btn {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.52px;
+  text-align: left;
+}
